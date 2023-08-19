@@ -1,6 +1,8 @@
 
 source code for bubble game with the help of css,html and javascript
 HTML code:
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +37,7 @@ HTML code:
     <script src="javascript.js"></script>
 </body>
 </html>
+
 
 <html lang="en">
 <head>
@@ -70,13 +73,14 @@ HTML code:
         
     </div>
 
-
-
-
-
     <script src="javascript.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 css code:
 *{
@@ -164,6 +168,69 @@ html,body{
 .h1{
     font-size: 100px;
 }
+
+
+
+
+
+javascript code:
+let time = 46;
+let score =0;
+let rn =0;
+
+function makebubble(){
+    let clutter = "";
+
+    for(i=1 ; i<=140 ; i++){
+    let random = Math.floor(Math.random()*10);
+    clutter += `<div class ='bubble-box'>${random}</div>`
+    document.querySelector(".bubble").innerHTML = clutter;
+}
+}
+
+ function timer(){
+  let stop=  setInterval(function(){
+        if(time>0){
+            time--;
+            document.querySelector("#Time").textContent = time;
+        } else if(time == 0){
+            document.querySelector(".bubble").innerHTML = `<h1> Game over! and the score was: ${score}</h1>`
+        }
+        else{
+              clearInterval(stop);
+        }
+    },1000)
+ }
+
+ function getNewHit(){
+     rn = Math.floor(Math.random()*10);
+    document.querySelector("#hit").textContent = rn;
+ }
+
+ document.querySelector(".bubble").addEventListener("click",function(details){
+     var clickednum = Number(details.target.textContent);
+     if(clickednum === rn){
+        increaseScore();
+        getNewHit();
+        makebubble();
+     }
+ })
+
+
+
+ function increaseScore(){
+    document.querySelector("#score").textContent = score;
+    score += 10;
+ }
+
+makebubble();
+timer();
+getNewHit();
+increaseScore();
+
+
+
+
 
 
 
