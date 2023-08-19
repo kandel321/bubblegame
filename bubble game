@@ -1,6 +1,44 @@
 
 source code for bubble game with the help of css,html and javascript
 HTML code:
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bubble game</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="panel">
+                <div class="top-panel">
+                   <div class="section-1">
+                    <h1>Hit :</h1>
+                    <div id="hit" class="box"></div>
+                   </div>
+                   <div class="section-1">
+                    <h1>Time remaning :</h1>
+                    <div id="Time" class="box"></div>
+                   </div>
+                   <div class="section-1">
+                    <h1>Score:</h1>
+                    <div id="score" class="box"></div>
+                   </div>
+                </div>
+            </div>
+            <div  class="bubble">
+                <div class="bubble-box">9</div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -130,6 +168,10 @@ html,body{
 .h1{
     font-size: 100px;
 }
+
+
+
+
 
 javascript code:
 let time = 46;
