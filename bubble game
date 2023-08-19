@@ -1,6 +1,6 @@
 
 source code for bubble game with the help of css,html and javascript
-
+HTML code:
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,13 +35,14 @@ source code for bubble game with the help of css,html and javascript
         
     </div>
 
-
-
-
-
     <script src="javascript.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 css code:
 *{
